@@ -39,4 +39,12 @@ The git repositories for each BMI can be found at https://github.com/nhm-usgs
 Each BMI depends on the PRMS6 model and library found at the prms repository currently using the 6.0.0_dev_bmi branch
 
 
+### Run on the CSDMS JupyterHub
 
+Instead of installing locally,
+the PRMS component Notebooks can be run on the CSDMS JupyterHub.
+Follow these steps:
+
+1. [Create an account](https://csdms.rc.colorado.edu/hub/signup) on the CSDMS JupyterHub, providing a username and password--they can be whatever you like
+1. [Request authorization](https://github.com/csdms/help-desk/issues/new?assignees=mdpiper&labels=jupyterhub&template=new-csdms-jupyterhub-account.md&title=CSDMS+JupyterHub+account) for your new account through the CSDMS Help Desk--if you don't already have a GitHub account, you'll be asked to make one
+1. Once approved, [run Jupyter Notebooks](https://csdms.rc.colorado.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fnhm-usgs%2Fbmi-prms-demo&urlpath=tree%2Fbmi-prms-demo%2Fnotebooks&branch=master)

@@ -110,7 +110,9 @@ class Gridmet:
         if val is None:
             return datetime.date.today() - datetime.timedelta(days=1)
         elif isinstance(val, str):
-            return datetime.date.fromisoformat(val)
+#             return datetime.date.fromisoformat(val)
+            format_str = '%Y-%m-%d'
+            return datetime.datetime.strptime(val, format_str).date()
         else:
             return val
 

@@ -11,7 +11,16 @@
     - `conda env create -f environment.yml`
 2. Activate environment
     - `conda activate prms6-bmi `
+### Download data
 
+ftp://ftpext.usgs.gov/pub/cr/co/denver/BRR-CR/pub/rmcd/prms6-bmi-demo-data.tar.gz
+
+- Unzip GIS folder into notebooks folder
+- Contents
+    - nhru_10U.shp
+    - nsegment_10U.shp
+    - weights.csv
+- If using CSDMS JupyterHub Paths to data are indicated in notebook
 
 The pipestem project used in testing is found in /prms/pipestem. 
 

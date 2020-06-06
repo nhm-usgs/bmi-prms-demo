@@ -304,12 +304,12 @@ def example_plot_strm(clim, gdf_ps, gdf_stream, msurf, msoil, mgw, mstrm, j, tim
     cax5 = divider5.append_axes("right", size="5%", pad=0.1)
     cax6 = divider6.append_axes("right", size="5%", pad=0.1)
     
-    gdf_ps.plot(column='tmax', vmin=20.0, vmax=75.0, ax=ax[0], legend=True, cax=cax0)
+    gdf_ps.plot(column='tmax', vmin=40.0, vmax=85.0, ax=ax[0], legend=True, cax=cax0)
     gdf_ps.plot(column='prcp', vmin=0.0, vmax=0.7, ax=ax[1], legend=True, cax=cax1)
     gdf_ps.plot(column='soil_moist_tot', vmin=0.25, vmax=3.0, ax=ax[2], legend=True, cax=cax2)
-    gdf_ps.plot(column='sroff', vmin=0.0, vmax=0.1, ax=ax[3], legend=True, cax=cax3)
-    gdf_ps.plot(column='ssres_flow', vmin=0.0, vmax=0.1, ax=ax[4], legend=True, cax=cax4)
-    gdf_ps.plot(column='gwres_flow', vmin=0.0, vmax=0.15, ax=ax[5], legend=True, cax=cax5)
+    gdf_ps.plot(column='sroff', vmin=0.0, vmax=0.15, ax=ax[3], legend=True, cax=cax3)
+    gdf_ps.plot(column='ssres_flow', vmin=0.0, vmax=0.05, ax=ax[4], legend=True, cax=cax4)
+    gdf_ps.plot(column='gwres_flow', vmin=0.0, vmax=0.02, ax=ax[5], legend=True, cax=cax5)
     gdf_stream.plot(column='seg_outflow', vmin=0.0, vmax=200, ax=ax[6], legend=True, cax=cax6)
 
         

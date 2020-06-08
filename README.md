@@ -1,7 +1,5 @@
 # PRMS6-BMI Test Projects and python evaluation code
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nhm-usgs/bmi-test-binder/master?urlpath=https%3A%2F%2Fgithub.com%2Fnhm-usgs%2Fbmi-test-binder%2Fblob%2Fmaster%2Fnotebooks%2F03_Surf_Soil_GW_SF_Validation.ipynb)
-
 ## Contents
 2. /prms - example PRMS projects for testing PRMS6 BMIs
 3. /notebooks - notebooks for testing and demonstrating PRMS6 BMIs

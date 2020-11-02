@@ -206,8 +206,10 @@ perv_actet
 slow_flow
 recharge
 soil_moist
+soil_moist_tot
 soil_to_gw
 ssr_to_gw
+ssres_flow
 dprst_seep_hru
 dprst_evap_hru
 infil
@@ -218,8 +220,6 @@ snowmelt
 soil_rechr
 contrib_fraction
 potet
-basin_potet
-basin_sroff
 gwres_flow
 gw_in_soil
 gw_in_ssr
@@ -310,3 +310,13 @@ covden_win_dynamic
 1
 4
 none
+####
+humidity_module
+1
+4
+humidity_none
+####
+wind_module
+1
+4
+wind_none

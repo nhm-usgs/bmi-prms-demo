@@ -308,7 +308,7 @@ def example_plot_strm(clim, gdf_ps, gdf_stream, msurf, msoil, mgw, mstrm, j, tim
     gdf_ps.plot(column='prcp', vmin=0.0, vmax=0.7, ax=ax[1], legend=True, cax=cax1)
     gdf_ps.plot(column='soil_moist_tot', vmin=0.25, vmax=3.0, ax=ax[2], legend=True, cax=cax2)
     gdf_ps.plot(column='sroff', vmin=0.0, vmax=0.15, ax=ax[3], legend=True, cax=cax3)
-    gdf_ps.plot(column='ssres_flow', vmin=0.0, vmax=0.05, ax=ax[4], legend=True, cax=cax4)
+    gdf_ps.plot(column='ssres_flow', vmin=0.0, vmax=0.005, ax=ax[4], legend=True, cax=cax4)
     gdf_ps.plot(column='gwres_flow', vmin=0.0, vmax=0.02, ax=ax[5], legend=True, cax=cax5)
     gdf_stream.plot(column='seg_outflow', vmin=0.0, vmax=200, ax=ax[6], legend=True, cax=cax6)
 
@@ -334,7 +334,62 @@ def example_plot_strm(clim, gdf_ps, gdf_stream, msurf, msoil, mgw, mstrm, j, tim
                 ax[i].set_title('seg_outflow')
     plt.tight_layout()
     
+def example_plot_strm2(clim, gdf_ps, gdf_stream, msurf, msoil, mgw, mstrm, j, timesel):
+    gdf_ps['tmax'] = (msurf.get_value('tmax')*(9.0/5.0)) + 32.0
+    gdf_ps['tmin'] = (msurf.get_value('tmin')*(9.0/5.0)) + 32.0
+    gdf_ps['prcp'] = msurf.get_value('hru_ppt')
+
+    gdf_ps['soil_moist_tot'] = msoil.var['soil_moist_tot'].data
+    gdf_ps['sroff'] = msurf.var['sroff'].data
+    gdf_ps['ssres_flow'] = msoil.var['ssres_flow'].data
+    gdf_ps['gwres_flow'] = mgw.var['gwres_flow'].data
+    gdf_stream['seg_outflow'] = mstrm.var['seg_outflow'].data
+
+    fig, ax = plt.subplots(ncols=7, figsize = (14,2))
+    divider0 = make_axes_locatable(ax[0])
+    divider1 = make_axes_locatable(ax[1])
+    divider2 = make_axes_locatable(ax[2])
+    divider3 = make_axes_locatable(ax[3])
+    divider4 = make_axes_locatable(ax[4])
+    divider5 = make_axes_locatable(ax[5])
+    divider6 = make_axes_locatable(ax[6])
+    cax0 = divider0.append_axes("right", size="5%", pad=0.1)
+    cax1 = divider1.append_axes("right", size="5%", pad=0.1)
+    cax2 = divider2.append_axes("right", size="5%", pad=0.1)
+    cax3 = divider3.append_axes("right", size="5%", pad=0.1)
+    cax4 = divider4.append_axes("right", size="5%", pad=0.1)
+    cax5 = divider5.append_axes("right", size="5%", pad=0.1)
+    cax6 = divider6.append_axes("right", size="5%", pad=0.1)
     
+    gdf_ps.plot(column='tmax', vmin=40.0, vmax=85.0, ax=ax[0], legend=True, cax=cax0)
+    gdf_ps.plot(column='prcp', vmin=0.0, vmax=0.7, ax=ax[1], legend=True, cax=cax1)
+    gdf_ps.plot(column='soil_moist_tot', vmin=0.25, vmax=3.0, ax=ax[2], legend=True, cax=cax2)
+    gdf_ps.plot(column='sroff', vmin=0.0, vmax=0.15, ax=ax[3], legend=True, cax=cax3)
+    gdf_ps.plot(column='ssres_flow', vmin=0.0, vmax=0.05, ax=ax[4], legend=True, cax=cax4)
+    gdf_ps.plot(column='gwres_flow', vmin=0.0, vmax=0.02, ax=ax[5], legend=True, cax=cax5)
+    gdf_stream.plot(column='seg_outflow', vmin=0.0, vmax=200, ax=ax[6], legend=True, cax=cax6)
+
+        
+    
+    for i in range(7):
+        ax[i].set_xticklabels([])
+        ax[i].set_yticklabels([])
+        if j == 0:
+            if i == 0:
+                ax[i].set_title('tmax')
+            elif i == 1:
+                ax[i].set_title('prcp')
+            elif i == 2:
+                ax[i].set_title('soil_moist_tot')
+            elif i == 3:
+                ax[i].set_title('sroff')
+            elif i == 4:
+                ax[i].set_title('ssres_flow')
+            elif i == 5:
+                ax[i].set_title('gwres_flow')
+            elif i == 6:
+                ax[i].set_title('seg_outflow')
+    plt.tight_layout()    
 
 
 def gm_example_plot(gdf_ps, gmdata, msurf, msoil, j, timesel):

@@ -29,7 +29,7 @@ The Fortran git repositories for each BMI can be found at https://github.com/nhm
 3. bmi-prms6-groundwater
 4. bmi-prms6-streamflow
 
-The python pymt gir repositories can be found here:
+The python pymt git repositories can be found here:
 https://github.com/pymt-lab
 
 1. pymt_prms_surface
@@ -47,7 +47,7 @@ Follow these steps:
 
 1. [Create an account](https://csdms.rc.colorado.edu/hub/signup) on the CSDMS JupyterHub, providing a username and password--they can be whatever you like
 1. [Request authorization](https://github.com/csdms/help-desk/issues/new?assignees=mdpiper&labels=jupyterhub&template=new-csdms-jupyterhub-account.md&title=CSDMS+JupyterHub+account) for your new account through the CSDMS Help Desk--if you don't already have a GitHub account, you'll be asked to make one
-1. Once approved, [run Jupyter Notebooks](https://csdms.rc.colorado.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fnhm-usgs%2Fbmi-prms-demo&urlpath=tree%2Fbmi-prms-demo%2Fnotebooks&branch=master)
+1. Once approved, [run Jupyter Notebooks](https://workbench-csdms.colorado.edu/)
 
 Disclaimer
 ----------

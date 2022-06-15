@@ -12,7 +12,7 @@ dependencies:
   - geopandas
   - descartes
   - requests
-  - pymt
+  - pymt >=1.3
   - pymt_prms_surface
   - pymt_prms_soil
   - pymt_prms_groundwater

@@ -19,6 +19,7 @@ def bmi_prms6_value_plot(data, n_index, val, label, start, end, tax = None):
             # dprms_val = dprms[val].sel(nhru=n_index, time=slice(start, end))
             data_val.plot.line(ax=tax, label=label)
             tax.legend()
+            tax.set_ylabel(f'{val} ({data[val].units})')
             # line1, = dprms_val.plot.line(x='time', ax=tax, add_legend=True)
 
         elif dim_type == 'nsegment':
@@ -27,6 +28,7 @@ def bmi_prms6_value_plot(data, n_index, val, label, start, end, tax = None):
 
             data_val.plot(ax=tax, label=label)
             tax.legend()
+            tax.set_ylabel(f'{val} ({data[val].units})')
             # line1, = dprms_val.plot(label='PRMS6')
 
         tax.set_title(f'{val} {n_index}')
